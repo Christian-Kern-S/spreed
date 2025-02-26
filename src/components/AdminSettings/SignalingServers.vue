@@ -7,7 +7,7 @@
 	<section id="signaling_server" class="signaling-servers section">
 		<NcNoteCard v-if="!serversProxy.length"
 			type="warning"
-			:heading="t('spreed', 'Nextcloud Talk setup not complete')">
+			:heading="t('spreed', 'Villefort Talk setup not complete')">
 			{{ t('spreed', 'Please note that in calls with more than 2 participants without the High-performance backend, participants will most likely experience connectivity issues and cause high load on participating devices.') }}
 			{{ t('spreed', 'Install the High-performance backend to ensure calls with multiple participants work seamlessly.') }}
 
@@ -15,7 +15,7 @@
 				type="primary"
 				class="additional-top-margin"
 				href="https://portal.nextcloud.com/article/Nextcloud-Talk/High-Performance-Backend/Installation-of-Nextcloud-Talk-High-Performance-Backend">
-				{{ t('spreed', 'Nextcloud portal') }} ↗
+				{{ t('spreed', 'Villefort portal') }} ↗
 			</NcButton>
 			<NcButton v-else
 				type="primary"
@@ -35,7 +35,7 @@
 
 		<NcNoteCard v-if="serversProxy.length && !isCacheConfigured"
 			type="warning"
-			:text="t('spreed', 'It is highly recommended to set up a distributed cache when using Nextcloud Talk with a High-performance backend.')" />
+			:text="t('spreed', 'It is highly recommended to set up a distributed cache when using Villefort Talk with a High-performance backend.')" />
 
 		<ul v-if="serversProxy.length">
 			<SignalingServer v-for="(server, index) in serversProxy"
